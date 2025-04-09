@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Odunsi Ifeoluwa | Portfolio</title>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.body-container {
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  margin: 6px 26%;
+  background-color: #0a0214;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4 {
+  margin-bottom: 10px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background: #141027;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+nav a {
+  margin: 0 10px;
+  font-weight: 500;
+  color: white;
+  opacity: 0.9;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+  gap: 30px;
+  text-align: left;
+}
+
+.avatar {
+  width: 120px;
+  border-radius: 20px;
+}
+
+.hero-text {
+  max-width: 300px;
+}
+
+.highlight {
+  color: #b277ff;
+}
+
+.cover {
+  color: #b277ff;
+  text-decoration: underline;
+}
+
+.bio {
+  margin-top: 10px;
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+/* Work Experience */
+.work-experience {
+  padding: 40px 0;
+}
+
+.work-experience h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: linear-gradient(145deg, #2b1055, #401078);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.card h3 {
+  color: #b583ff;
+  margin-bottom: 5px;
+}
+
+.card p {
+  font-size: 13px;
+  color: #ddd;
+}
+
+.middle-message {
+  text-align: center;
+  margin: 60px auto;
+  font-size: 14px;
+}
+
+.middle-message span {
+  color: #b277ff;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.icons img {
+  width: 35px;
+  height: 35px;
+  filter: drop-shadow(0 0 5px #fff);
+}
+
+.center-icon-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.center {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, rgba(111,0,255,0.8), rgba(10,2,20,0.5));
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(111, 0, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center::before {
+  content: '\03A3';
+  font-size: 60px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+}
+
+.orbit {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgba(111, 0, 255, 0.3);
+  border-radius: 50%;
+  animation: rotate 6s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.projects {
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #1a0e2d;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(178, 119, 255, 0.1);
+}
+
+.project img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.project-details h4 {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.project-details h3 {
+  color: white;
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.project-details p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #141027;
+  font-size: 14px;
+}
+
+.socials {
+  margin-top: 10px;
+}
+
+.socials a {
+  margin: 0 10px;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .project {
+    padding: 10px;
+  }
+}
+</style>
+
+<body>
+
+  <section class="body-container">
+  <header class="container">
+    <div class="logo">Σ</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Lab</a>
+    </nav>
+  </header>
+
+  <section class="hero container">
+    <img src="ife.jpg" alt="Profile" class="avatar" />
+    <div class="hero-text">
+      <h4>Hello! I am <span class="highlight">Odunsi Ifeoluwa</span></h4>
+      <h1>A Designer who <br>Judges a book by its <span class="cover">cover...</span></h1>
+      <p>Because if it doesn’t look good, how will you even use it?</p>
+      <h2>I'm a Software Engineer at <a class="highlight" href="#">Facebook</a></h2>
+      <p class="bio">A self-taught UI/UX designer with 3+ years of experience. I design digital products that balance user needs and business goals.</p>
+    </div>
+  </section>
+
+  <section class="work-experience container">
+    <h2>Work Experience</h2>
+    <div class="grid-container">
+      <div class="card">
+        <img src="IMG 1.jpg" alt="Icon 1">
+        <div>
+          <h3>CIB on the Mobile</h3>
+          <p>Manage your banking activities securely and digitally anywhere.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="IMG3.jpg" alt="Icon 2">
+        <div>
+          <h3>CIB on the Mobile</h3>
+          <p>Access fast and convenient banking services on the go.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="IMG 2.jpg" alt="Icon 3">
+        <div>
+          <h3>CIB on the Mobile</h3>
+          <p>Stay secure and connected with seamless transactions.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="IMG4.jpg" alt="Icon 4">
+        <div>
+          <h3>CIB on the Mobile</h3>
+          <p>Experience digital banking innovation at its best.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="middle-message container">
+    <p>I'm currently looking to join a <span>cross-functional</span> team that values improving people’s lives through accessible design</p>
+    <div class="icons">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="Icon">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg
+      " alt="Icon">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="Icon">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png" alt="Icon">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Icon">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP">
+      <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3">
+    </div>
+  </section>
+
+  <section class="center-icon-section">
+    <div class="center">
+      <div class="orbit"></div>
+    </div>
+  </section>
+
+  <section class="projects container">
+    <div class="project">
+      <img src="screen.jpg" alt="Project Screenshot">
+    </div>
+    <div class="project">
+      <img src="screens.jpg" alt="Project Screenshot">
+    </div>
+  </section>
+
+  <footer class="container">
+    <h2>Contact</h2>
+    <p>I'm currently looking to join a cross-functional team that values improving people’s lives through accessible design.</p>
+    <p>Have a project in mind? Let's connect.</p>
+    <p>Email: odunsiifeoluwa@gmail.com</p>
+    <div class="socials">
+      <a href="#">🌐</a>
+      <a href="#">🔗</a>
+      <a href="#">📷</a>
+    </div>
+  </footer>
+</section>
+</body>
+</html>
